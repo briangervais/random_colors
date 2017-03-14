@@ -1,0 +1,19 @@
+{
+  "name": "randomizr",
+  "version": "1.0.0",
+  "description": "Randomizr Project",
+  "main": "../main.js",
+  "scripts": {
+    "test": "Test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n/a.git"
+  },
+  "author": "Brian Gervais",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n/a/issues"
+  },
+  "homepage": "https://github.com/n/a#readme"
+}

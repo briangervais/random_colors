@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+.vein {
+  /*border-radius: 50%;*/
+  content: "";
+  /*display: none;*/
+  height: 50vh;
+  left: -100%;
+  opacity: .5;
+  position: absolute;
+  width: 300%;
+}
+
+.vein:first-of-type {
+  background: rrgba(255, 255, 255, .1);
+  border: 40vh rgba(255, 255, 255, .1) solid;
+  bottom: 0;
+  /* Animation Props */
+  animation-iteration-count: infinite; /* integer */
+  animation-name: rotate;
+  animation-duration: 20s;
+  /*animation-delay: 2s;*/
+  /*animation-direction: reverse;*/ /* alternate, reverse */
+  transform: rotate(45deg);
+}
+
+.vein:last-of-type {
+  background: rgba(255, 255, 255, .2);
+  border: 40vh rgba(255, 255, 255, .1) solid;
+  top: 0;
+
+  /* Animation Props */
+  animation-iteration-count: infinite; /* integer */
+  animation-name: rotate-reverse;
+  animation-duration: 30s;
+  /*animation-delay: 2s;*/
+  animation-direction: reverse; /* alternate, reverse */
+  transform: rotate(-45deg);
+}
+
+* {
+  /*transition: all 1s ease-in-out;*/
+}
+
+colors,
+texts,
+text {
+  display: block;
+}
+
+colors {
+  display: none;
+  margin-top: calc(-10vh - 11vw);
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+color {
+  background: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10vw;
+  margin: 0 .25vw;
+  transition:
+    background 0.5s ease-in-out;
+  width: 10vw;
+}
+
+texts {
+  margin-top: calc(-2.5vw - .5rem);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 1;
+}
+
+text {
+  color: white;
+  left: 2vw;
+  text-transform: uppercase;
+  font-size: calc(2.5rem + 5vw);
+  /*left: 0;*/
+  /*margin-top: calc(-2.5vw - .5rem);*/
+  opacity: 0;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  /*top: 50%;*/
+  transition:
+    opacity .5s .5s ease-in-out,
+    margin-top: .5s 2.5s ease-in-out;
+  width: calc(100% - 4vw);
+  z-index: 1;
+}
+
+/*
+LOADED
+ */
+
+body.loaded text {
+  opacity: 1;
+}
+
+/*body.arf dog:nth-of-type(1) {
+  margin-top: -7.5vw;
+}
+
+body.arf dog:nth-of-type(3) {
+  margin-top: 5vw;
+}*/
+
+/* Animations */
+@keyframes rotate {
+    0%   {transform: rotate(45deg)}
+    50%  {transform: rotate(30deg)}
+    100% {transform: rotate(45deg)}
+}
+
+@keyframes rotate-reverse {
+    0%   {transform: rotate(-45deg)}
+    50%  {transform: rotate(-30deg)}
+    100% {transform: rotate(-45deg)}
+}
