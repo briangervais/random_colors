@@ -4,14 +4,14 @@
 
 body {
   background: black;
-  font-family: "Century Gothic", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   margin: 0;
   overflow: hidden;
   transition: all .5s ease-in-out;
 }
 
-poop {
+line {
   /*border-radius: 50%;*/
   content: "";
   /*display: none;*/
@@ -22,7 +22,7 @@ poop {
   width: 300%;
 }
 
-poop:first-of-type {
+line:first-of-type {
   background: rrgba(255, 255, 255, .1);
   border: 40vh rgba(255, 255, 255, .1) solid;
   bottom: 0;
@@ -35,7 +35,7 @@ poop:first-of-type {
   transform: rotate(45deg);
 }
 
-poop:last-of-type {
+line:last-of-type {
   background: rgba(255, 255, 255, .2);
   border: 40vh rgba(255, 255, 255, .1) solid;
   top: 0;
@@ -75,9 +75,22 @@ color {
   display: inline-block;
   height: 10vw;
   margin: 0 .25vw;
+  opacity: 0;
   transition:
     background 0.5s ease-in-out;
   width: 10vw;
+}
+
+color:nth-of-type(1) {
+  transition: opacity 0.25s 0.75s ease-in-out;
+}
+
+color:nth-of-type(2) {
+  transition: opacity 0.25s 0.25s ease-in-out;
+}
+
+color:nth-of-type(3) {
+  transition: opacity 0.25s 0.5s ease-in-out;
 }
 
 texts {
@@ -109,31 +122,61 @@ text {
   z-index: 1;
 }
 
+.flip1,
+.flip2 {
+  transition: opacity .25s 1.25s ease-in-out;
+}
+
+.flip1 {
+  opacity: 0;
+}
+
+.flip2 {
+  position: absolute;
+  opacity: 1;
+}
+
 /*
 LOADED
  */
 
 body.loaded text {
+  /*opacity: 1;*/
+}
+
+body.loaded .flip1 {
+  /*opacity: 1;*/
+}
+
+body.loaded .flip2 {
   opacity: 1;
 }
 
-/*body.arf dog:nth-of-type(1) {
-  margin-top: -7.5vw;
+body.loaded color {
+  opacity: 1;
 }
-
-body.arf dog:nth-of-type(3) {
-  margin-top: 5vw;
-}*/
 
 /* Animations */
 @keyframes rotate {
-    0%   {transform: rotate(45deg)}
-    50%  {transform: rotate(30deg)}
-    100% {transform: rotate(45deg)}
+    0%   {
+      transform: rotate(45deg);
+    }
+    50%  {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(45deg);
+    }
 }
 
 @keyframes rotate-reverse {
-    0%   {transform: rotate(-45deg)}
-    50%  {transform: rotate(-30deg)}
-    100% {transform: rotate(-45deg)}
+    0%   {
+      transform: rotate(-45deg);
+    }
+    50%  {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-45deg);
+    }
 }

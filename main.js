@@ -3,14 +3,21 @@ var $ = require('jquery');
 
 $(document).ready(function() {
 
+  var sG = '50' + '%'; // Saturation
+  var lG = '50' + '%'; // Lightness
+  var aG = '1'; // Alpha
+
   // Random H value (hsla)
   // between 0-360
   function randomH(h) {
     // Get random number between 0 - 360
     var h = Math.floor(Math.random() * 360) + 1;
-    var s = '50' + '%';
-    var l = '50' + '%';
-    var a = '1';
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
     var hsla = h + ', ' + s + ', ' + l + ', ' + a;
 
     // Return HSLA value
@@ -20,9 +27,12 @@ $(document).ready(function() {
   function opposite(color) {
     // Get random number between 0 - 360
     var h = color - 180;
-    var s = '50' + '%';
-    var l = '50' + '%';
-    var a = '1';
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
     var hsla = h + ', ' + s + ', ' + l + ', ' + a;
 
     // Return HSLA value
@@ -32,9 +42,12 @@ $(document).ready(function() {
   function triad1(color) {
     // Get random number between 0 - 360
     var h = color - 120;
-    var s = '50' + '%';
-    var l = '50' + '%';
-    var a = '1';
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
     var hsla = h + ', ' + s + ', ' + l + ', ' + a;
 
     // Return HSLA value
@@ -44,9 +57,12 @@ $(document).ready(function() {
   function triad2(color) {
     // Get random number between 0 - 360
     var h = color - 240;
-    var s = '50' + '%';
-    var l = '50' + '%';
-    var a = '1';
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
     var hsla = h + ', ' + s + ', ' + l + ', ' + a;
 
     // Return HSLA value
