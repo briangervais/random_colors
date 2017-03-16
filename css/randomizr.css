@@ -145,7 +145,7 @@ body.loaded text {
 }
 
 body.loaded .flip1 {
-  /*opacity: 1;*/
+  opacity: 1;
 }
 
 body.loaded .flip2 {
