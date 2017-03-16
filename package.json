@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/n/a/issues"
   },
-  "homepage": "https://github.com/n/a#readme"
+  "homepage": "https://github.com/n/a#readme",
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "randomcolor": "^0.4.4"
+  }
 }
