@@ -1,125 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var $ = require('jquery');
-
-$(document).ready(function() {
-
-  var sG = '50' + '%'; // Saturation
-  var lG = '50' + '%'; // Lightness
-  var aG = '1'; // Alpha
-
-  // Random H value (hsla)
-  // between 0-360
-  function randomH(h) {
-    // Get random number between 0 - 360
-    var h = Math.floor(Math.random() * 360) + 1;
-    // var s = '50' + '%';
-    // var l = '50' + '%';
-    // var a = '1';
-    var s = sG;
-    var l = lG;
-    var a = aG;
-    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
-
-    // Return HSLA value
-    return hsla;
-  }
-
-  function opposite(color) {
-    // Get random number between 0 - 360
-    var h = color - 180;
-    // var s = '50' + '%';
-    // var l = '50' + '%';
-    // var a = '1';
-    var s = sG;
-    var l = lG;
-    var a = aG;
-    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
-
-    // Return HSLA value
-    return hsla;
-  }
-
-  function triad1(color) {
-    // Get random number between 0 - 360
-    var h = color - 120;
-    // var s = '50' + '%';
-    // var l = '50' + '%';
-    // var a = '1';
-    var s = sG;
-    var l = lG;
-    var a = aG;
-    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
-
-    // Return HSLA value
-    return hsla;
-  }
-
-  function triad2(color) {
-    // Get random number between 0 - 360
-    var h = color - 240;
-    // var s = '50' + '%';
-    // var l = '50' + '%';
-    // var a = '1';
-    var s = sG;
-    var l = lG;
-    var a = aG;
-    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
-
-    // Return HSLA value
-    return hsla;
-  }
-
-  // HSLA
-  var rc1 = randomH();
-  var rc2 = opposite(rc1.substr(0, rc1.indexOf(',')));
-  var rc3 = triad1(rc1.substr(0, rc1.indexOf(',')));
-  var rc4 = triad2(rc1.substr(0, rc1.indexOf(',')));
-
-  console.log(rc1, rc2);
-
-  // Add Class to Body #1
-  // TODO: Move to init function
-  $('body').addClass('loaded');
-
-  //
-  // Set CSS of Elements
-  //
-
-  $('body').css({
-    'background': 'hsla(' + rc1 + ')'
-  });
-
-  // $('.vein:first-of-type').css({
-  //   background: rc5
-  // });
-  //
-  // $('.vein:last-of-type').css({
-  //   background: rc6
-  // });
-  //
-
-
-  // Dog
-  $('text').css({
-    'background': 'hsla(' + rc2 + ')',
-    'color': 'hsla(' + rc1 + ')'
-  });
-
-
-  $('color:nth-of-type(1)').css({
-    'background': 'hsla(' + rc1 + ')'
-  })
-
-  $('color:nth-of-type(2)').css({
-    'background': 'hsla(' + rc3 + ')'
-  })
-
-  $('color:nth-of-type(3)').css({
-    'background': 'hsla(' + rc4 + ')'
-  })
-});
-
-},{"jquery":2}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.1.1
  * https://jquery.com/
@@ -10341,4 +10220,125 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}]},{},[1]);
+},{}],2:[function(require,module,exports){
+var $ = require('jquery');
+
+$(document).ready(function() {
+
+  var sG = '50' + '%'; // Saturation
+  var lG = '50' + '%'; // Lightness
+  var aG = '1'; // Alpha
+
+  // Random H value (hsla)
+  // between 0-360
+  function randomH(h) {
+    // Get random number between 0 - 360
+    var h = Math.floor(Math.random() * 360) + 1;
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
+    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
+
+    // Return HSLA value
+    return hsla;
+  }
+
+  function opposite(color) {
+    // Get random number between 0 - 360
+    var h = color - 180;
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
+    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
+
+    // Return HSLA value
+    return hsla;
+  }
+
+  function triad1(color) {
+    // Get random number between 0 - 360
+    var h = color - 120;
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
+    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
+
+    // Return HSLA value
+    return hsla;
+  }
+
+  function triad2(color) {
+    // Get random number between 0 - 360
+    var h = color - 240;
+    // var s = '50' + '%';
+    // var l = '50' + '%';
+    // var a = '1';
+    var s = sG;
+    var l = lG;
+    var a = aG;
+    var hsla = h + ', ' + s + ', ' + l + ', ' + a;
+
+    // Return HSLA value
+    return hsla;
+  }
+
+  // HSLA
+  var rc1 = randomH();
+  var rc2 = opposite(rc1.substr(0, rc1.indexOf(',')));
+  var rc3 = triad1(rc1.substr(0, rc1.indexOf(',')));
+  var rc4 = triad2(rc1.substr(0, rc1.indexOf(',')));
+
+  console.log(rc1, rc2);
+
+  // Add Class to Body #1
+  // TODO: Move to init function
+  $('body').addClass('loaded');
+
+  //
+  // Set CSS of Elements
+  //
+
+  $('body').css({
+    'background': 'hsla(' + rc1 + ')'
+  });
+
+  // $('.vein:first-of-type').css({
+  //   background: rc5
+  // });
+  //
+  // $('.vein:last-of-type').css({
+  //   background: rc6
+  // });
+  //
+
+
+  // Dog
+  $('text').css({
+    'background': 'hsla(' + rc2 + ')',
+    'color': 'hsla(' + rc1 + ')'
+  });
+
+
+  $('color:nth-of-type(1)').css({
+    'background': 'hsla(' + rc1 + ')'
+  })
+
+  $('color:nth-of-type(2)').css({
+    'background': 'hsla(' + rc3 + ')'
+  })
+
+  $('color:nth-of-type(3)').css({
+    'background': 'hsla(' + rc4 + ')'
+  })
+});
+
+},{"jquery":1}]},{},[2]);

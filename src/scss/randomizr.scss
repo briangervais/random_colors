@@ -115,9 +115,7 @@ text {
   position: absolute;
   text-align: center;
   /*top: 50%;*/
-  transition:
-    opacity .5s .5s ease-in-out,
-    margin-top: .5s 2.5s ease-in-out;
+  transition: opacity .5s .5s ease-in-out;
   width: calc(100% - 4vw);
   z-index: 1;
 }
