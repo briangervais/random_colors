@@ -1,3 +1,26 @@
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent; }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; }
+  input[type=range]:focus {
+    outline: none; }
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* Add cool effects to your sliders! */ }
+
 * {
   box-sizing: border-box; }
 
@@ -8,6 +31,15 @@ body {
   margin: 0;
   overflow: hidden;
   transition: all .5s ease-in-out; }
+
+summary {
+  font-size: .75rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+details {
+  font-size: .65rem;
+  font-weight: bold; }
 
 line {
   /*border-radius: 50%;*/
@@ -118,6 +150,19 @@ text {
 .flip2 {
   position: absolute;
   opacity: 1; }
+
+.controls--color {
+  background: white;
+  bottom: 0;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 250px; }
+  .controls--color article {
+    margin-bottom: 2rem; }
+    .controls--color article:last-of-type {
+      margin-bottom: 0; }
 
 /*
 LOADED

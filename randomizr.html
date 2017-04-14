@@ -23,9 +23,50 @@
     <texts>
       <text class="flip2">(ヘ°.°)ヘ ┳━┳</text>
       <text class="flip1">(╯°□°)╯︵ ┻━┻</text>
+      <text>¯\_(ツ)_/¯</text>
       <!-- <dog>Chooses</dog>
       <dog>You!!</dog> -->
-    </animals>
+    </texts>
+
+    <section class="controls--color">
+
+      <!-- H -->
+      <article>
+
+        <details class="details">
+          <summary>Hue</summary>
+          <p>Choose a value between 0-360.  Like the degrees of a color wheel!</p>
+        </details>
+
+        <input class="range__h" type="range" value="180" min="0" max="360" step="1" />
+
+      </article>
+
+      <!-- L foreground -->
+      <article>
+
+        <details>
+          <summary>Lightness: Foreground</summary>
+          <p>This will be set the lightness for the foreground element(s).</p>
+        </details>
+
+        <input class="range__l--foreground" type="range" value="50" min="0" max="100" step="1" />
+
+      </article>
+
+      <!-- L background -->
+      <article>
+
+        <details>
+          <summary>Lightness: Background</summary>
+          <p>This will be set the lightness for the background element(s).</p>
+        </details>
+
+        <input class="range__l--background" type="range" value="50" min="0" max="100" step="1" />
+
+      </article>
+
+    </section>
 
     <script src="build/main.js"></script>
   </body>
